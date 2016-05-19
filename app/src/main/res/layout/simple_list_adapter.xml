@@ -8,11 +8,34 @@
     android:paddingRight="16dp"
     android:paddingTop="8dp">
 
-    <TextView
-        android:id="@+id/id_adapter_simple_list__text_view"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:background="@color/colorAccent" />
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="João"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sobrenome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="da Silva"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItem" />
 
 </LinearLayout>

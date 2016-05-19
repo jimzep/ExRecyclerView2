@@ -15,7 +15,7 @@ import java.util.List;
 public class SimpleListAdapter extends RecyclerView.Adapter<SimpleListAdapter.ViewHolder> {
 
 
-    private List<String> mValues;
+    private List<String> mItemsIdade;
 
 
     @Override
@@ -27,13 +27,13 @@ public class SimpleListAdapter extends RecyclerView.Adapter<SimpleListAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String text = mValues.get(position);
-        holder.mTextView.setText(text);
+        String text = mItemsIdade.get(position);
+        holder.mTextViewIdade.setText(text);
     }
 
     @Override
     public int getItemCount() {
-        return this.mValues.size();
+        return this.mItemsIdade.size();
     }
 
 
@@ -41,7 +41,7 @@ public class SimpleListAdapter extends RecyclerView.Adapter<SimpleListAdapter.Vi
         Constructor do SimpleListAdapter
      */
     public SimpleListAdapter(List<String> items) {
-        this.mValues = items;
+        this.mItemsIdade = items;
     }
 
 
@@ -50,11 +50,15 @@ public class SimpleListAdapter extends RecyclerView.Adapter<SimpleListAdapter.Vi
     //--------------------------------------------------
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView;
+        public TextView mTextViewNome;
+        public TextView mTextViewSobreNome;
+        public TextView mTextViewIdade;
 
         public ViewHolder(View view) {
             super(view);
-            mTextView = (TextView) view.findViewById(R.id.id_adapter_simple_list__text_view);
+            mTextViewNome = (TextView) view.findViewById(R.id.nome);
+            mTextViewSobreNome = (TextView) view.findViewById(R.id.sobrenome);
+            mTextViewIdade = (TextView) view.findViewById(R.id.idade);
         }
     }
 
