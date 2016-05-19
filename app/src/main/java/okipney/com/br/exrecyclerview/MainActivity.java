@@ -10,6 +10,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+	// Baseado no ex do site: http://blog.dtidigital.com.br/adeus-listview%E2%80%8A-%E2%80%8A-um-guia-para-implementar-o-recyclerview/
     private RecyclerView mRecyclerView;
 
     @Override
